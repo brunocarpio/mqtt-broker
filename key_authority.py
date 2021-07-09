@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib import parse
 from charm.toolbox.pairinggroup import PairingGroup,ZR,G1,G2,GT,pair

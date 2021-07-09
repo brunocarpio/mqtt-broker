@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mosquitto_pid=$(ps aux | grep "[0-9] mosquitto" | sed '' | sed 's/^[a-zA-Z]\++\s\+\([0-9]\+\)\s\+.*$/\1/')
-ka_pid=$(ps aux | grep "[0-9] python3 key_authority.py" | sed 's/^[a-zA-Z]\+.\s\+\([0-9]\+\)\s\+.*$/\1/')
+mosquitto_pid=$(ps aux | grep "\smosquitto\s" | sed '' | sed 's/^[a-zA-Z]\++\s\+\([0-9]\+\)\s\+.*$/\1/')
+ka_pid=$(ps aux | grep "\spython3\s" | sed 's/^[a-zA-Z]\+.\s\+\([0-9]\+\)\s\+.*$/\1/')
 
 kill -9 $mosquitto_pid
 kill -9 $ka_pid

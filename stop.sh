@@ -1,6 +1,6 @@
 #!/bin/sh
 
-mosquitto_pid=$(ps aux | grep "\smosquitto\s" | sed '' | sed 's/^[a-zA-Z]\++\s\+\([0-9]\+\)\s\+.*$/\1/')
+mosquitto_pid=$(ps aux | grep "\smosquitto\s" | sed 's/^[a-zA-Z]\+\s\+\([0-9]\+\)\s\+.*$/\1/')
 ka_pid=$(ps aux | grep "\spython3\s" | sed 's/^[a-zA-Z]\+.\s\+\([0-9]\+\)\s\+.*$/\1/')
 
 kill -9 $mosquitto_pid
